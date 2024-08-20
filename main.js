@@ -23,12 +23,12 @@ for (var i = 0; i < boxes.length; i++) {
 
 function CheckIfEqual(img1,img2){ // To check if two images chosen are matched or not.
     if(img1.src == img2.src){
-        var audio = new Audio("sounds/correct.mp3");
+        var audio = new Audio("correct.mp3");
         audio.play();
     }
     else{
         spandiv.innerHTML++;
-        var audio = new Audio("sounds/lose.mp3");
+        var audio = new Audio("lose.mp3");
         audio.play();
 
         setTimeout(function(){
@@ -45,7 +45,7 @@ function CheckIfEqual(img1,img2){ // To check if two images chosen are matched o
 function IfGameWon(array){
  if(array.length == 20){
     alert("YOU WONNNNN!");
-    var audio = new Audio("sounds/cheering.mp3");
+    var audio = new Audio("cheering.mp3");
     audio.play();
  }
 }
