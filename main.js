@@ -1,5 +1,9 @@
-
+var name = prompt("Welcome,What is your name?");
+var namediv = document.getElementById("player-name");
+namediv.innerHTML = name;
 var selected = [];
+var spandiv = document.getElementById("tries");
+spandiv.innerHTML =0;
 var boxes = document.querySelectorAll(".item");
 for (var i = 0; i < boxes.length; i++) {
     var box = boxes[i];
@@ -23,6 +27,7 @@ function CheckIfEqual(img1,img2){ // To check if two images chosen are matched o
         audio.play();
     }
     else{
+        spandiv.innerHTML++;
         var audio = new Audio("sounds/lose.mp3");
         audio.play();
 
